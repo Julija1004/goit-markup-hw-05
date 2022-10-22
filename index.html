@@ -20,7 +20,7 @@
                 </a>
             <ul class="site-nav"> 
    
-                <li class="site-nav-item">
+                <li class="site-nav-item is-active">
                 <a class="current " href="./index.html">Студія</a>
             </li>
             <li class="site-nav-item">
@@ -56,7 +56,7 @@
 <section class="hero">
     <div class="container">
     <h1 class="main-title">Ефективні рішення для <br />вашого бізнесу</h1>
-    <button class="nav-button" type="button">Замовити послугу</button>
+    <button class="nav-button" type="button" data-modal-open>Замовити послугу</button>
 </div>
 </section>
 <section class="section">
@@ -106,14 +106,24 @@
     <div class="container">
     <h2 class="section-title">Чим ми займаємося</h2>
     <ul class="list works-items">
-        <li>
+        <li class="works-container">
+          <div class="">
             <img src="./images/What_we_do_1.jpg" width="370" height="294" alt="руки набирають текст на клівіатурі">
+            <div class="work-position-box">
+            <p class="works-headings">Десктопні додатки</p>
+          </div>
+          </div>
+            
         </li>
-        <li>
+        <li class="works-container">
+          <div class="">
             <img src="./images/What_we_do_2.jpg" width="370" height="294" alt="телефон у руці, на екрані прототип телефону">
-        </li>
-        <li>
+            <p class="works-headings">Мобільні додатки</p></div>
+          </li>
+        <li class="works-container">
+          <div class="">
             <img src="./images/What_we_do_3.jpg"  width="370" height="294" alt="малюнок кольорів на планшеті">
+             <p class="works-headings">Дизайнерські рішення</p></div>
         </li>
     </ul>
     <div class="container">
@@ -400,5 +410,21 @@
 </div>
 
 </footer>
+
+<!--BACKDROP-->
+<div class="backdrop is-hidden" data-modal>
+
+  <div class="modal">
+
+    <button type=button class="modal-close-btn" data-modal-close>
+      <svg class="modal-close-icon" width="18" height="18">
+        <use href="../symbol-defs.svg#icon-close">
+        </use>
+
+      </svg>
+    </button>
+  </div>
+</div>
+<script src="./js/modal.js"></script>
 </body>
 </html>
