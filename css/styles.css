@@ -64,6 +64,7 @@ ul {
 }
 .site-nav-item {
     align-items: center;
+    transition: color var(--transition-dur-and-func);
     
     
 }
@@ -122,12 +123,15 @@ li {
 }
 
 .is-active::after{
-    position: relative;
-    top: 32px; 
+    position: absolute;
+    bottom: -32px; 
+    left: 0;
+    width: 100%;
     content: "";
     display: block;
-    border-bottom: 4px solid var(--outline-color);
     border-radius: 2px;
+    height: 4px;
+    background-color: var(--outline-color);
 }
    
 .link-footer {
@@ -190,6 +194,7 @@ justify-content: center;
     font-weight: 500;
     letter-spacing: 0.02em;
     font-size: 14px;
+    position: relative;
 }
 
 
@@ -453,7 +458,7 @@ border-radius: 4px;
 padding: 6px 25px;
 height: 38px;
 border: none;
-transition: color var(--transition-dur-and-func);
+transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func), box-shadow var(--transition-dur-and-func);
 }
 .filter-button:hover, .filter-button:focus {
 color: var(--main-light);
@@ -529,7 +534,7 @@ color: var(--secondary-color);
     display: block;
     text-decoration: none;
     position: relative;
-    transition: color var(--transition-dur-and-func);
+    transition: color var(--transition-dur-and-func), box-shadow var(--transition-dur-and-func);
 
   }
 .image-link:hover, .image-link:focus {
@@ -718,7 +723,13 @@ fill: #FFFFFF;
     width: 100%;
     height: 100%;
     color: rgb(255, 255, 255);
-    padding: 63px 24px ;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    padding: 63px 24px;
     background-color: rgba(33, 150, 243, 0.9);
     overflow: auto;
     transform: translateY(100%);
@@ -797,7 +808,7 @@ fill: #FFFFFF;
     align-items: center;
     width: 30px;
     height: 30px;
-    padding: 0;
+    padding: 8px;
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
@@ -807,6 +818,7 @@ fill: #FFFFFF;
 .modal-close-btn:hover,
 .modal-close-btn:focus {
     border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .modal-close-btn:hover .modal-close-icon,
